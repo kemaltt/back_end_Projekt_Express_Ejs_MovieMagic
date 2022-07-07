@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie detail</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+        <main>
+            <div class="detail_container">
+                <img src="https://image.tmdb.org/t/p/original<%= movieDetail.backdrop_path %>"
+                    alt="  <%- movieDetail.title %>">
+
+                <div class="movie_detail">
+                    <h1>
+                        <%- movieDetail.title %>
+                    </h1>
+                    <div class="release_date">
+
+                        <p>
+                            <%- movieDetail.release_date %>
+                        </p>
+                        <p>Released</p>
+                    </div>
+                    <div class="vote">
+                        <img src="/img/Vector.png" alt="">
+                        <p>
+                            <%- movieDetail.vote_average %> /10
+                        </p>
+                        <p>
+                            <%- movieDetail.vote_count %>
+                        </p>
+                    </div>
+
+                    <div class="genres">
+
+                        <% movieDetail.genres.forEach((genre)=> { %>
+                            <p>
+                                <%- genre.name %>
+                            </p>
+                            <% }) %>
+                    </div>
+
+                    <h2>Plot Summary</h2>
+
+                    <p class="overview">
+                        <%- movieDetail.overview %>
+                    </p>
+
+                </div>
+
+
+            </div>
+        </main>
+
+</body>
+
+</html>

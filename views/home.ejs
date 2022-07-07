@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+        <main>
+            <div class="category_container">
+
+
+                <a href="/genre/<%= genres.genres[0].id %>">
+                    <%- genres.genres[0].name %>
+                </a><a href="/genre/<%= genres.genres[4].id %>">
+                    <%- genres.genres[4].name %>
+                </a><a href="/genre/<%= genres.genres[3].id %>">
+                    <%- genres.genres[3].name %>
+                </a><a href="/genre/<%= genres.genres[6].id %>">
+                    <%- genres.genres[6].name %>
+                </a><a href="/genre/<%= genres.genres[10].id %>">
+                    <%- genres.genres[10].name %>
+                </a><a href="/genre/<%= genres.genres[11].id %>">
+                    <%- genres.genres[11].name %>
+                </a>
+
+            </div>
+            <div class="movies_container">
+                <% movies.forEach((m)=> { %>
+                    <a href="/detail/<%= m.id %>">
+                        <div class="movie_card">
+                            <img src="https://image.tmdb.org/t/p/original<%- m.poster_path %>" alt="  <%- m.title %>">
+                            <h5>
+                                <%- m.title %>
+                            </h5>
+                        </div>
+                    </a>
+                    <% }) %>
+
+            </div>
+        </main>
+</body>
+
+</html>

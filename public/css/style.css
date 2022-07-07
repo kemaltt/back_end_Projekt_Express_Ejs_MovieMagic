@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#333333 ;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header{
+    background-color:#4F4F4F ;
+    padding: 2vh 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+padding: 0 13%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.search{
+    margin-left: 17%;
+}
+.search input{
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+background-color: #333333;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width:300px;
+}
+.search button{
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width:75px;
+    cursor: pointer;
+}
+
+
+main .category_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh 15%;
+ 
+}
+
+main .category_container a{
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+}
+
+main .movies_container{
+    /* text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2vh 10%;
+}
+
+main .movie_card{
+width: 200px;
+height: 300px;
+    
+}
+main .movie_card img{
+width: 100%;
+height: 80%;
+border-radius: 20px;
+/* object-fit: contain; */
+}
+main .movie_card h5{
+    height: 20%;
+    color: #fff;
+}
+.detail_container{
+    position: relative;
+}
+.detail_container> img{
+    width: 100%;
+    height: 50vh;
+    border-radius: 0 0 0 50px;
+}
+.movie_detail{
+    padding: 4vh 4%;
+}
+
+.release_date{
+   display: flex;
+   gap: 20px;
+   padding: 2vh 0;
+}
+.genres{
+    display: flex;
+    gap: 20px;
+    padding: 2vh 0;
+}
+
+.genres p{
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+}
+.vote {
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    right: 0;
+    top: 350px;
+    color: #333333;
+    background-color: #fff;
+    padding: 1vh 3%;
+    border-radius: 50px 0 0 50px;
+    width: 150px;
+
+}
+.vote img{
+    width: 50px;
+    height: 50px;
+    
+}
+.overview{
+    font-weight: 200;
+    padding:2vh 0;
+}
